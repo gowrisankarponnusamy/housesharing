@@ -14,11 +14,12 @@ export const API_PATHS = {
 
     REVIEWS: {
         ADD_REVIEW: "reviews/add",
+        GET_REVIEW_BY_ID: (id) => `reviews/getall/${id}`
     },
 
     USERS: {
         ADD_USER: "users/add",
-        USER_ID: (email) => `users/${email}`,
+        USER_ID: (user) => `users/${user}`,
         USER_EXISTS: (id) => `users/exists/${id}`,
         USER_LOGIN:"/users/login",
         ME:"/users/me",
@@ -34,6 +35,7 @@ export const API_PATHS = {
         BOOK_ROOM: "bookings/book",
         CANCEL_ROOM: "bookings/cancel",
         GET_ALL_BOOKINGS: "bookings/admin/all",
+        GET_BOOKING_BY_ID: (roomId) => `bookings/room/${roomId}`,
     },
 
     ADMIN: {
@@ -41,5 +43,9 @@ export const API_PATHS = {
         LIST_ROOMS: "admin/listRooms",
         DELETE_USER_BY_ID: (userID) => `admin/deleteUser/${userID}`,
         DELETE_ROOM: (roomId) => `admin/deleteRoom/${roomId}`,
+    },
+    IMAGES: {
+        UPLOAD_IMAGES:"/images",
+        GET_IMAGE: (roomId) => `/images/${roomId}`,
     }
 };

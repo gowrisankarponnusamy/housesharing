@@ -22,7 +22,7 @@ const MyRooms = () => {
         console.warn("User not logged in or user data missing.");
       }
     }, []);
-
+  
   return (
     <div className="p-6">
       <h2 className="text-2xl font-bold mb-4">My Posted Rooms</h2>
